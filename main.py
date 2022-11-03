@@ -12,9 +12,9 @@ import joblib
 
 import warnings
 warnings.filterwarnings("ignore")
-with open("Clustered_Customer_Data.csv", "r") as fp:
-    df = pd.read_csv("Clustered_Customer_Data.csv", index_col="Unnamed: 0")
-
+with open("Customer_Data.csv", "r") as fp:
+    df = pd.read_csv("Customer_Data.csv", index_col="Unnamed: 0")
+print()
 df = df.drop(['Cluster'], axis=1)
 df["MINIMUM_PAYMENTS"] = df["MINIMUM_PAYMENTS"].fillna(df["MINIMUM_PAYMENTS"].mean())
 df["CREDIT_LIMIT"] = df["CREDIT_LIMIT"].fillna(df["CREDIT_LIMIT"].mean())
